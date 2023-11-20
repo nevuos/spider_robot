@@ -31,5 +31,9 @@
     "exitDialogConfirmButton": "Sair",
     "splash_timeout": "O carregamento está demorando mais do que o esperado!",
     "status_robots": "Status do Robo",
-    "cameraActivationPrompt": "Toque para ativar a câmera"
+    "cameraActivationPrompt": "Toque para ativar a câmera",
+    "buttonCrouch": "Agachar",
+    "buttonStand": "Levantar",
+    "buttonWave": "Acenar",
+    "buttonSitMode": "Modo Sentar"
 }

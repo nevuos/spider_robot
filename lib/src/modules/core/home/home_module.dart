@@ -1,11 +1,12 @@
 import 'package:flutter_modular/flutter_modular.dart';
+
 import 'controllers/home_controller.dart';
 import 'views/home_screen.dart';
 
 class HomeModule extends Module {
   @override
   void binds(i) {
-    i.add<HomeController>(HomeController.new);
+    i.addSingleton<HomeController>(HomeController.new);
   }
 
   @override

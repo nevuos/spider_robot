@@ -71,21 +71,27 @@ class HomeScreenState extends State<HomeScreen>
               drawer: const CustomDrawer(),
               body: TabBarView(
                 controller: _tabController,
+                physics: const NeverScrollableScrollPhysics(),
                 children: [
                   _buildHomeContent(context, isDarkThemeSelected),
-                  const ControlWidget(), 
+                  const ControlWidget(),
                 ],
               ),
-              bottomNavigationBar: BottomNavigationBar(
-                currentIndex: _homeController.currentIndex,
-                onTap: (index) {
-                  _tabController.animateTo(index);
+              bottomNavigationBar: ValueListenableBuilder<int>(
+                valueListenable: _homeController,
+                builder: (context, currentIndex, child) {
+                  return BottomNavigationBar(
+                    currentIndex: currentIndex,
+                    onTap: (index) {
+                      _tabController.animateTo(index);
+                    },
+                    items: bottomNavBarItems(selectedColor, defaultItemColor),
+                    selectedItemColor: selectedColor,
+                    unselectedItemColor: defaultItemColor,
+                    selectedFontSize: 14,
+                    unselectedFontSize: 14,
+                  );
                 },
-                items: bottomNavBarItems(selectedColor, defaultItemColor),
-                selectedItemColor: selectedColor,
-                unselectedItemColor: defaultItemColor,
-                selectedFontSize: 14,
-                unselectedFontSize: 14,
               ),
             ),
           );

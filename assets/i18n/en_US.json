@@ -31,5 +31,10 @@
     "exitDialogConfirmButton": "Exit",
     "splash_timeout": "Loading taking longer than expected!",
     "status_robots": "Status Robot",
-    "cameraActivationPrompt": "Tap to activate the camera"
+    "cameraActivationPrompt": "Tap to activate the camera",
+    "buttonCrouch": "Crouch",
+    "buttonStand": "Stand",
+    "buttonWave": "Wave",
+    "buttonSitMode": "Sit Mode"
+
 }

@@ -1,4 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:spider_robot/src/shared/services/spider_control_service.dart';
 
 import 'modules/core/home/home_module.dart';
 import 'modules/core/splash/splash_module.dart';
@@ -12,6 +13,7 @@ class AppModule extends Module {
   void binds(i) {
     i.addSingleton<ThemeController>(ThemeController.new);
     i.addSingleton<LanguageController>(LanguageController.new);
+    i.addSingleton<SpiderControlService>(SpiderControlService.new);
   }
 
   @override

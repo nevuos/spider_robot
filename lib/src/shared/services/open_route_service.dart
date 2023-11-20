@@ -3,10 +3,8 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
 
-class APIException implements Exception {
-  final String message;
-  APIException(this.message);
-}
+import '../utils/exceptions.dart';
+
 
 class OpenRouteService {
   final apiKey = dotenv.env['API_KEY']!;
